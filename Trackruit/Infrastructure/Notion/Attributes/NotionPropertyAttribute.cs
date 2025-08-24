@@ -1,10 +1,10 @@
 namespace Trackruit.Infrastructure.Notion.Attributes;
 
 [AttributeUsage(AttributeTargets.Property)]
-public class NotionPropertyAttribute(string propertyName, NotionPropertyType propertyType) : Attribute
+public class NotionPropertyAttribute(string name, NotionPropertyType type) : Attribute
 {
-    public string PropertyName { get; } = propertyName;
-    public NotionPropertyType PropertyType { get; } = propertyType;
+    public string Name { get; } = name;
+    public NotionPropertyType Type { get; } = type;
 }
 
 public enum NotionPropertyType
@@ -14,4 +14,5 @@ public enum NotionPropertyType
     Number,
     Date,
     Url,
+    Status
 }
